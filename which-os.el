@@ -22,9 +22,10 @@
 
 (defun is-lsw()
   (when (equal system-type 'gnu/linux)
-      (string-suffix-p "Microsoft" (string-trim (shell-command-to-string "uname -a"))
-		       t)))
+    (string-suffix-p "Microsoft" (string-trim (shell-command-to-string "uname -a"))
+		     t)))
 
 (defun is-android()
-      (string-suffix-p "Android" (string-trim (shell-command-to-string "uname -a"))))
+  (string-suffix-p "Android" (string-trim (shell-command-to-string "uname -a"))))
 
+(provide 'which-os)

@@ -8,6 +8,8 @@
 ;;; Commentary:
 ;; This package includes selection of helper functions to work with cross platform emacs configurations
 
+;;; Code:
+
 (defun is-linux()
   (when (equal system-type 'gnu/linux)
     t))
@@ -29,3 +31,4 @@
   (string-suffix-p "Android" (string-trim (shell-command-to-string "uname -a"))))
 
 (provide 'which-os)
+;;; which-os.el ends here
